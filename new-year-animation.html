@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HAPPY NEW YEAR 2025!</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .new-year {
+      font-family: Arial, sans-serif;
+      font-size: 5em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 0 10px #fff;
+      opacity: 0;
+      animation: fadeInOut 4s infinite;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .firework {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .firework:nth-child(1) {
+      top: 30%;
+      left: 20%;
+      animation: explode1 2s infinite;
+    }
+
+    .firework:nth-child(2) {
+      top: 40%;
+      right: 20%;
+      animation: explode2 2.5s infinite 0.3s;
+    }
+
+    .firework:nth-child(3) {
+      top: 20%;
+      left: 50%;
+      animation: explode3 2.2s infinite 0.5s;
+    }
+
+    .firework:nth-child(4) {
+      top: 60%;
+      left: 30%;
+      animation: explode4 2.7s infinite 0.7s;
+    }
+
+    .firework:nth-child(5) {
+      top: 25%;
+      right: 35%;
+      animation: explode5 2.3s infinite 0.2s;
+    }
+
+    .firework:nth-child(6) {
+      top: 45%;
+      left: 40%;
+      animation: explode6 2.6s infinite 0.4s;
+    }
+
+    .firework:nth-child(7) {
+      top: 35%;
+      right: 45%;
+      animation: explode7 2.4s infinite 0.6s;
+    }
+
+    .firework:nth-child(8) {
+      top: 55%;
+      left: 25%;
+      animation: explode8 2.8s infinite 0.8s;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+      50% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    }
+
+    @keyframes explode1 {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+      50% { transform: scale(20); box-shadow: 0 0 20px 10px #ff3333; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+    }
+
+    @keyframes explode2 {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+      50% { transform: scale(20); box-shadow: 0 0 20px 10px #33ff33; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+    }
+
+    @keyframes explode3 {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+      50% { transform: scale(20); box-shadow: 0 0 20px 10px #3333ff; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+    }
+
+    @keyframes explode4 {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+      50% { transform: scale(20); box-shadow: 0 0 20px 10px #ff33ff; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+    }
+
+    @keyframes explode5 {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+      50% { transform: scale(20); box-shadow: 0 0 20px 10px #ffff33; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+    }
+
+    @keyframes explode6 {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+      50% { transform: scale(20); box-shadow: 0 0 20px 10px #33ffff; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+    }
+
+    @keyframes explode7 {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+      50% { transform: scale(20); box-shadow: 0 0 20px 10px #ff9933; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+    }
+
+    @keyframes explode8 {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+      50% { transform: scale(20); box-shadow: 0 0 20px 10px #9933ff; }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 #fff; }
+    }
+
+    .countdown {
+      font-family: Arial, sans-serif;
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 20px;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      animation: sparkle 1.5s infinite;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="countdown" id="countdown">Loading...</div>
+    <div class="new-year">HAPPY 2025!</div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+  </div>
+
+  <script>
+    function updateCountdown() {
+      const now = new Date();
+      const newYear = new Date('January 1, 2025 00:00:00');
+      const diff = newYear - now;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('countdown').textContent = 
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // Add random sparkles
+    function addSparkles() {
+      const container = document.querySelector('.container');
+      for (let i = 0; i < 30; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+        sparkle.style.left = Math.random() * 100 + '%';
+        sparkle.style.top = Math.random() * 100 + '%';
+        sparkle.style.animationDelay = Math.random() * 2 + 's';
+        container.appendChild(sparkle);
+      }
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+    addSparkles();
+  </script>
+</body>
+</html>
